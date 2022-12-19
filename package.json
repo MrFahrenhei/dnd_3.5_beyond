@@ -1,0 +1,25 @@
+{
+  "name": "dnd_3.5_beyond",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrFahrenhei/dnd_3.5_beyond.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrFahrenhei/dnd_3.5_beyond/issues"
+  },
+  "homepage": "https://github.com/MrFahrenhei/dnd_3.5_beyond#readme",
+  "dependencies": {
+    "next": "^13.0.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
