@@ -1,25 +1,22 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react"
+import api from "./api/api.js";
 
-function Home(){
+export default function App(){
+    const [author, title] = useState();
+
+    useEffect(() => {
+        api
+          .get("/author/William Shakespeare")
+          .then((response) => setUser(response.data))
+          .catch((err) => {
+            console.error("ops! ocorreu um erro" + err);
+          });
+      }, []);
+
     return (
-        <div>
-            <h1>Home</h1>
-            <Contador />
+        <div className="App">
+            <p>Autores: {author}</p>
+            <p>Obras: {title}</p>
         </div>
     )
 }
-
-function Contador(){
-    const [contador, setContador] = useState(1);
-
-    function addCount(){setContador(contador+1)};
-
-    return(
-        <div>
-            <div>{contador}</div>
-            <button onClick={addCount}>Clica ai meu nobre</button>
-        </div>
-    )
-}
-
-export default Home
